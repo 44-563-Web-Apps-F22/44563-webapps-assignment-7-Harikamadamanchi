@@ -160,8 +160,8 @@
         let score = 0
         let lastCheck = 12
         let treasureLocation = 18
-
-        function check(position) {debugger
+        treasureLocation = getRandomInt(0, 24)
+        function check(position) {
             image = document.getElementById(ids[position])
             if (position == treasureLocation) {
                 image.src = "treasure.jpg"
@@ -201,6 +201,11 @@
                 document.getElementById("help").innerHTML = "Sorry, no help available"
             }
         }
+        function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+    }
     </script>
 
 </body>

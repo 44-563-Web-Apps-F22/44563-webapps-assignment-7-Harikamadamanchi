@@ -28,6 +28,7 @@
             console.log(myTime);
         }
         function startTime() {
+            counter = getRandomInt(0, 11) // 11 is exclusive
             for (let i = 0; i < 4; i++) {
                 setTimeout(() => {
                     document.getElementById("countdown").innerHTML = i;
@@ -43,5 +44,10 @@
                 }
             }, 3000);
         }
+        function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+    }
     </script>
 </body>
