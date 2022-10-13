@@ -161,12 +161,12 @@
         let lastCheck = 12
         let treasureLocation = 18
 
-        function check(position) {
+        function check(position) {debugger
             image = document.getElementById(ids[position])
             if (position == treasureLocation) {
                 image.src = "treasure.jpg"
             } else {
-                image.src = "Empty Chest.png"
+                image.src = "Empty chest.jpg"
             }
             chestCount += 1
             score += 1
